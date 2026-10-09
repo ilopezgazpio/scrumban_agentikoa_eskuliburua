@@ -6,24 +6,26 @@
 % Irudiak: Pictures/07/ (goiburu hutsa header_07.pdf.xoj; bi begizten irudia marrazteko: 7.bi_begiztak.xoj)
 
 Aurreko kapituluetan taldea osatu dugu, zereginak idazten ikasi dugu, biltegia antolatu dugu, proiektu-taula eskuz kudeatu dugu eta, azkenik, kodetzeko agenteak ezagutu ditugu.
-Falta dena da hori guztia lotzen duen \textbf{lan egiteko modua}: nork erabakitzen du zer egin, nork egiten du, nork egiaztatzen du eta zer erritmotan.
+Falta dena da hori guztia lotzen duen \textbf{lan egiteko modua} definitzea da: nork erabakitzen duen zer egin, nork egiten du, nork egiaztatzen du eta zer erritmotan.
 Kapitulu honetan liburuaren muina aurkeztuko dizut: Scrumban agentikoa.
 
 Izena bera azalpen bat da.
-\textit{Scrumban} bi metodo ezagunen nahasketa da, \textit{Scrum} eta \textit{Kanban}, eta \textit{agentikoa} adjektiboak esan nahi du nahasketa hori gizakiz eta agentez osatutako lantalde baterako egokitu dugula.
+\textit{Scrumban} bi metodo ezagunen nahasketa baino ez da, \textit{Scrum} eta \textit{Kanban}, eta \textit{agentikoa} adjektiboak esan nahi duena da nahasketa hori gizakiz eta agentez osatutako lantalde baterako egokitu dugula.
 Ez da zerotik asmatutako metodologia bat.
-Nahiago izan dut ezagunak diren eta funtzionatzen dutela frogatu duten bi oinarri hartu, eta behar dugun tokian bakarrik moldatu.
+Nahiago izan dut ezagunak diren eta funtzionatzen dutela frogatu duten bi oinarri sendo hartzea, eta behar dugun tokian bakarrik moldatzea.
 Horregatik, metodoa ulertzeko, lehenbizi osagaiak ulertu behar dira.
 
-\section{Nondik dator izena?}
+\section{Nondik dator terminoa?}
 
 \textit{Scrumban} hitza Corey Ladasek zabaldu zuen 2008 inguruan, bere blogean argitaratutako saiakera-sorta batean, gero liburu batean bildu zuena \parencite{ladas2009scrumban}.
-Ladasen asmoa ez zen metodo berri bat sortzea, baizik eta \textit{Scrum} erabiltzen zuten taldeei \textit{Kanban}en eta \textit{lean} pentsamoldearen ideiak pixkanaka txertatzeko bide bat eskaintzea: lana ikusgai jarri, aldi berean lanean dagoen lan kopurua mugatu eta fluxua neurtu, \textit{Scrum}en egitura bat-batean bota gabe.
-Denborarekin, izena bi metodoen edozein nahasketa praktiko izendatzeko erabiltzen hasi zen: \textit{Scrum}en rolak eta gertaerak mantentzen dituzten taldeak, baina lana \textit{Kanban} taula batean eta fluxuan oinarrituta kudeatzen dutenak.
-Gaur egun ohikoa da industrian, bereziki garapen-lanak eta mantentze-lanak nahasten dituzten taldeetan.
+Ladasen asmoa ez zen metodo berri bat sortzea, baizik eta \textit{Scrum} erabiltzen zuten taldeei \textit{Kanban}en eta \textit{lean} pentsamoldearen ideiak pixkanaka txertatzeko bide bat eskaintzea:
+lana ikusgai jarri, aldi berean lanean dagoen lan kopurua mugatu eta fluxua neurtu, \textit{Scrum}en egitura bat-batean bota gabe.
+Denborarekin, izena bi metodoen edozein nahasketa praktiko izendatzeko erabiltzen hasi zen: \textit{Scrum}en rolak eta gertaerak mantentzen dituzten taldeak,
+baina lana \textit{Kanban} taula batean eta fluxuan oinarrituta kudeatzen dutenak.
+Gaur egun ohikoa da aipatutakoa industrian ikustea, bereziki garapen-lanak eta mantentze-lanak nahasten dituzten taldeetan.
 
 \textit{Agentikoa} adjektiboa, berriz, askoz berriagoa da.
-Adimen artifizialaren esparruan, \textit{agente} deitzen diogu helburu bat emanda bere kabuz jarduten duen sistemari: planifikatu, tresnak erabili, emaitzak aztertu eta berriro saiatu, pausoz pauso, gizakiak une bakoitzean gidatu gabe.
+Adimen artifizialaren esparruan, \textit{agente} deitzen diogu helburu bat emanda bere kabuz jarduten duen sistemari: planifikatu, tresnak erabili, emaitzak aztertu eta berriro saiatu, pausoz pauso, gizakiak une bakoitzean gidatzea behar izan gabe.
 \ref{cha:agenteak}.~kapituluan ikusi dugun bezala, kodetzeko agenteak horrelakoak dira: iturburu-kodea idazten, exekutatzen eta zuzentzen dute, eta biltegiarekin, testekin eta proiektu-taularekin elkarreragiten dute.
 Software-ingeniaritza agentikoa, beraz, agenteak lantaldearen parte diren software-ingeniaritza da; eta Scrumban agentikoa, lantalde horretarako proposatzen dudan lan egiteko modua.
 
@@ -33,14 +35,14 @@ Gure hautua apalagoa da eta, nire ustez, irakasteko egokiagoa: ikasleek dagoenek
 
 \section{\textit{Scrum}: inplementazioaren erritmoa}
 
-\textit{Scrum} lan-esparru bat da ---ez metodo oso bat---, produktu konplexuak garatzeko, 1990eko hamarkadan Ken Schwaberrek eta Jeff Sutherlandek proposatua eta \textit{Scrum} gidan laburbildua \parencite{schwaber2020scrumguide}.
+\textit{Scrum} lan-esparru bat da ---ez metodo oso bat---, produktu konplexuak garatzeko, 1990eko hamarkadan Ken Schwaberrek eta Jeff Sutherlandek proposatua eta \textit{Scrum} gidan laburbildua dago \parencite{schwaber2020scrumguide}.
 Haren oinarria \textbf{enpirismoa} da: ez dugu dena aurrez planifikatzen, baizik eta ziklo laburretan lan egin, egindakoa aztertu eta plana egokitzen dugu.
-Horretarako, \textit{Scrum}ek hiru gauza definitzen ditu, eta ez askoz gehiago: rolak, gertaerak eta artefaktuak.
+Horretarako, \textit{Scrum}ek hiru gauza definitzen ditu: rolak, gertaerak eta artefaktuak.
 
 \textbf{Rolak} hiru dira.
 \textbf{Produktu-jabeak} produktuaren balioaren ardura du: zer eraiki eta zer ordenatan erabakitzen du, eta bezeroarekin edo irakaslearekin hitz egiten du.
 \textbf{Garatzaileek} produktua eraikitzen dute, eta \textit{sprint} bakoitzean zer eta nola egin erabakitzen dute.
-\textbf{\textit{Scrum} zuzendariak} esparrua ulertzen eta aplikatzen laguntzen du, eta taldeak dituen oztopoak kentzen ditu.
+\textbf{\textit{Scrum} zuzendariak} esparrua ulertzen eta aplikatzen laguntzen du, eta taldeak dituen oztopoak ebazten laguntzen du.
 Aurreko eskuliburuan rol horiek banatzen ikusi genuen talde txiki bat; hemen, agenteak sartzean rolak nola aldatzen diren ikusiko dugu.
 
 \textbf{Gertaerak} \textit{sprint}aren inguruan antolatzen dira.
@@ -92,8 +94,8 @@ Eta neurketak ditu \textit{Kanban}ek beste ezerk baino gehiago.
 Bi dira nagusiak: \textbf{ziklo-denbora}, zeregin batek lanean hasi zenetik amaitu arte behar izan duen denbora; eta \textbf{emaria}, denbora-tarte batean amaitutako zereginen kopurua.
 Aldi berean lanean dagoen lana mugatzeak ziklo-denbora laburtzen du, eta hori da ideia osoaren gakoa: zenbat eta zeregin gehiago izan aldi berean irekita, orduan eta gehiago itxaroten du bakoitzak, eta orduan eta gehiago aldatzen gara batetik bestera ezer bukatu gabe.
 
-\textit{Kanban} \textbf{exekuziorako} metodoa da, beraz: ez dio ezer esaten zer eraiki behar den edo nork erabakitzen duen hori, baina oso zehatza da lana nola igaro behar den sisteman zehar.
-Horrexegatik erabiltzen da hainbeste mantentze-lanetan, laguntza-zerbitzuetan eta etengabeko entregan: etengabe iristen diren zereginak, etengabe ateratzen direnak.
+\textit{Kanban} \textbf{exekuziorako} metodoa da, beraz: ez du eraiki behar den produktuaren inguruan ezer esaten, ez eta erabakiak hartu behar dituenaren inguruan, atazaren bizi zikloaren inguruan bakarrik agintzen du, hau da: garbi uzten duen gauza bakarra da lanak nola igaro behar duen sisteman zehar.
+Horrexegatik erabiltzen da hainbeste mantentze-lanetan, laguntza-zerbitzuetan eta etengabeko entregetan.
 
 \section{Zergatik nahastu biak lantalde hibrido batean?}
 
@@ -112,7 +114,7 @@ Zeregin bat hartu, adar bat sortu, kodea idatzi, testak pasa, \textit{pull reque
 Erritmo horrek \textit{Kanban}en fluxua behar du.
 Agenteek zereginak \textbf{hartu} egiten dituzte \textit{sprint backlog}etik; ez dizkiegu banan-banan eman behar.
 \textbf{Aldi berean lanean dagoen lanaren muga} gizakia muga den zutabeetan jartzen da: berrikuspenean eta giza erabakia behar duten zereginetan.
-Bestela, agenteek \textit{pull request}ak pilatuko dituzte inork irakurri baino azkarrago, eta hori da lantalde hibridoen lehen gaixotasuna.
+Bestela, agenteek \textit{pull request}ak pilatuko dituzte inork irakurri baino azkarrago, eta hori da lantalde hibridoen lehen ahulezia.
 \textbf{Zutabe-arau esplizituak} dira agenteei eman diezaiekegun gauzarik baliotsuena, zuzen-zuzenean jarraituko dituztelako: noiz dago zeregin bat hartzeko prest, noiz dago eginda, noiz eskalatu behar da gizakiarengana.
 Eta \textbf{ziklo-denbora} da neurri egokia, ez abiadura edo puntuak: zenbat denbora behar du zeregin batek egiteko zutabetik eginda zutabera, eta non itxaroten du.
 Fluxu horren gakoa da gizakien eta agenteen denborak eta erritmoak sinkronizatu egin behar direla; horregatik, gizakian oinarritzen den lan-automata bat definitzen da, zereginak martxan jartzeko eta gizakien oniritziaren zain geratzeko.
