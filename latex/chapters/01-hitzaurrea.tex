@@ -1,8 +1,96 @@
 % 01. kapitulua - Hitzaurrea eta helburuak
-% Helburua: motibazioa (botila-lepoa kodetzetik diseinura eta koordinaziora mugitu da),
-%           liburuaren helburuak eta nola irakurri. Laburra: eskuak zikintzen hasi 20. orrialderako.
-% Aurreko liburutik berrerabil daitekeena:
-%   - aurreko_liburua_2024/kapituluak/1-hitzaurrea.tex  (tonua eta egitura; oraingoan pluralean idatzi)
-%   - aurreko_liburua_2024/kapituluak/2-laburpena.tex   (helburuen eta atalen deskribapena)
+% Aurreko liburuko hitzaurrearen tonuan: arazoa lehenbizi, abisu zintzoa, bidaiaren pintzelada, helburuak, nola irakurri.
+% Lehen pertsona singularrean idatzita; egilekiderik bada, pluralera pasatu (UEUko ebaluatzaileak aurreko liburuan aipatu zuen).
+% TODO: 3. paragrafoko eszena generikoa zure benetako esperientzia batekin ordezkatu, aurreko liburuko tesiaren pasadizoak egin zuen moduan.
 % Irudiak: Pictures/01/ (goiburu hutsa: header_01.pdf.xoj marraztu eta header_01.pdf.pdf gisa esportatu)
-\todo[inline]{Idazteko.}
+
+Urte askoan, software-proiektu baten botila-lepoa kodea idaztea izan da.
+Orduak eta orduak teklatuaren aurrean, akatsen bila, funtzionalitate bat amaitu nahian.
+Eskoletan behin eta berriz ikusi dugun eszena da: ikasleak azken gauean dena kodetzen, entregak presaka integratzen, eta taldekideen lana nola batu ez dakitela.
+Horregatik idatzi nuen \textit{Git bertsioak kontrolatzeko sistemarako eskuliburua}: lana ez galtzeko, pausoka garatzeko eta taldean integratzeko tresna bat eskura jartzearren.
+
+Gauzak aldatu dira, eta azkar.
+Kodetzeko agenteek ---hizkuntza-eredu handietan oinarritutako programek, iturburu-kodea idazteko, exekutatzeko eta zuzentzeko gai direnek--- minutu gutxitan idazten dute duela gutxi ikasle bati arratsalde oso bat eskatzen zion funtzionalitatea.
+Ez dizut gezurrik esango: \textbf{kodea idaztea ez da jada botila-lepoa}.
+Eta, hala ere, proiektuek lehen bezala egiten dute porrot; batzuetan, azkarrago gainera.
+
+Har dezagun eszena bat, gero eta ohikoagoa dena.
+Lau ikasleko talde batek \textit{sprint} oso bat ``amaitu'' du arratsalde batean, agente bati esker.
+Aurkezpenaren egunean demoak huts egiten du.
+Inork ez daki azaltzen kodeak zer egiten duen.
+Testak pasatzen dira, bai, baina norbaitek ---edo zerbaitek--- testak aldatu ditu pasa zitezen.
+Proiektu-taulan dena dago Eginda zutabean.
+Kodea ez zen arazoa.
+Arazoa zen inork ez zuela erabaki zer eraiki behar zen, inork ez zuela lana zeregin argitan banatu, eta inork ez zuela egindakoa egiaztatu.
+
+Botila-lepoa lekuz aldatu da: kodea idaztetik, \textbf{zer idatzi erabakitzera}, lana \textbf{zereginetan banatzera}, egindakoa \textbf{egiaztatzera} eta guztia \textbf{integratzera}.
+Hau da, diseinura, koordinaziora eta egiaztapenera.
+Beste hitz batzuetan esanda: software-ingeniaritzara.
+Agenteek kodea idazten dute, baina ez dute zure ordez erabakitzen, ez dute zure taldea antolatzen eta ez dira zure lanaren erantzule.
+Hori guztia gizakion esku dago, lehen baino gehiago.
+
+Eskuliburu honek \textbf{lantalde hibridoetan} lan egiten irakatsi nahi dizu: gizakiz eta agentez osatutako taldeetan.
+Ikusiko duzunez, agenteek lantalde on batek beti behar izan duen gauza bera behar dute, baina zorrotzago: zeregin argiak, onarpen-irizpideak, arauak dituen biltegi bat, epaile gisa jokatzen duen integrazio jarraitua eta berrikuspena.
+Agenteak ez du anbiguotasunik barkatzen: zeregin lausoa ematen badiozu, kode okerra idatziko dizu, eta konfiantza osoz gainera.
+
+Ez dizut gezurrik esango, ordea: eskuliburu honek ez zaitu agenteen aditu bihurtuko, eta ez dizu tresna jakin baten erabilera irakatsiko.
+Tresnak hilabete gutxitan aldatzen dira, eta liburu hau inprimatzerako batzuk zaharkituta egongo dira.
+Horregatik, tresna zehatzak eranskinean eta liburuaren biltegi lagunean utzi ditut, eta liburuan \textbf{aldatzen ez dena} landu dut: nola zehaztu, nola antolatu, nola egiaztatu.
+Eta, Gitekin bezala, hau ere \textbf{erabiliz ikasten da}: bidean ariketa-sorta handia landu beharko duzu, eta ariketa horietako askotan zuk zeuk egingo duzu eskuz gero agenteari emango diozun lana.
+Ez dago bestelako misteriorik.
+
+Bada aipatu nahi dudan arrisku bat, hasieratik.
+Agenteei lana eskuordetzea erraza da; ulermena eskuordetzea, berriz, hondamendia.
+Kodea irakurtzen, testak idazten eta arkitektura epaitzen jakin behar duzu, lehen bezainbeste edo gehiago, zuk egiaztatu beharko baituzu agenteak ``eginda'' dioen hori benetan eginda dagoen.
+Eskuliburu honek \textbf{ardura} irakatsi nahi du, ez delegazioa.
+Ez zaitut agenteak erabiltzera behartu nahi; erabiliko dituzu, nahi ala ez, zure lankideek erabiliko dituztelako.
+Nahiago dut ondo erabiltzen jakin dezazun.
+
+\section{Zer ikasiko dugun}
+
+Jorratuko ditugun gaien pintzelada bat ematearren: hasieran \textbf{taldeez eta rolez} mintzatuko gara (\ref{cha:taldeak}.~kapitulua), Belbinen rolak eta \textit{Scrum}eko rolak gogoratuz, eta agenteak taldean non kokatzen diren erabakiz.
+Ondoren, \textbf{erabiltzaile-historioetatik zereginetara} pasatuko gara (\ref{cha:zereginak}.~kapitulua): nola idatzi agente batek ---edo taldekide batek--- zalantzarik gabe egikari dezakeen zeregin bat, onarpen-irizpideekin eta egindakoaren definizioarekin.
+Jarraian, \textbf{biltegia} lan-eremu partekatu gisa antolatuko dugu (\ref{cha:biltegia}.~kapitulua): zereginaren araberako adarrak, \textit{pull request}-ak, babes-arauak eta integrazio jarraitua epaile gisa.
+Giten oinarriak ez ditugu errepikatuko; horretarako badago aurreko eskuliburua.
+
+Teoriarik gabeko kapitulu batean \textbf{eskuak zikinduko ditugu} (\ref{cha:taula}.~kapitulua): proiektu-taula bat sortuko dugu GitHuben, \textit{Kanban} eta \textit{Scrum} ikuspegiak gehituko dizkiogu, \textit{issue}-ak idatzi eta zutabeetan zehar mugituko ditugu, eta \textit{sprint} oso bat simulatuko dugu rol-jokoan.
+Agenteek gero kontsumituko duten guztia, gizakiok lehenbizi.
+
+Orduan bakarrik hitz egingo dugu \textbf{kodetzeko agenteez} (\ref{cha:agenteak}.~kapitulua): zer diren, nola ematen zaien testuingurua, zer baimen behar dituzten, zenbat kostatzen diren eta nola egiten duten huts.
+Horren gainean eraikiko dugu liburuaren muina, \textbf{Scrumban agentikoa} (\ref{cha:scrumban}.~kapitulua): \textit{Scrum}en erritmoa gizakientzat ---rolak, \textit{sprint}a, berrikuspena, atzera-begirakoa--- eta \textit{Kanban}en fluxua agenteentzat ---zereginak banan-banan hartu, lanean dauden zereginen muga, arau esplizituak eta eskalatze-protokoloa---.
+Gainbegirale-agente batek, scrumban-agenteak, zainduko du fluxua, eta gizakiak erabakiko du gizakiak bakarrik erabaki dezakeena.
+
+Bi ariketa-kapitulutan jarriko dugu praktikan: lehenbizi, \textbf{kaixo, Scrumban agentikoa!} erako ariketa txiki batekin (\ref{cha:kaixo}.~kapitulua) ---zeregin bat, agente bat, \textit{pull request} bat---, eta gero, \textbf{ekosistemaren proiektuarekin} (\ref{cha:ekosistema}.~kapitulua), aurreko eskuliburuko taldea agenteekin lanean jarrita.
+Amaieran, \textbf{DevOps} ikuspegitik egiaztapenaz eta berrikuspenaz arituko gara (\ref{cha:devops}.~kapitulua) ---gizakiak zer egiaztatu behar duen, eta nola---, eta \textbf{ohiko arazoen eta errezeten} kapitulu batekin itxiko dugu (\ref{cha:arazoak}.~kapitulua), aurreko eskuliburuan bezala.
+Txantiloiak eta konfigurazio-fitxategiak eranskinean bildu ditugu (\ref{cha:eranskina}.~kapitulua).
+
+\section{Helburuak}
+
+Eskuliburu hau amaitzean, honako hauetarako gai izatea nahiko nuke:
+
+\begin{itemize}
+    \item agente batek edo taldekide batek anbiguotasunik gabe egikari dezakeen zeregin bat idazteko, onarpen-irizpide eta guzti;
+    \vspace{0.15cm}
+    \item biltegi bat antolatzeko, zereginaren araberako adarrekin, berrikuspenarekin eta integrazio jarraituarekin ate gisa;
+    \vspace{0.15cm}
+    \item proiektu-taula bat kudeatzeko, \textit{Kanban} nahiz \textit{Scrum} ikuspegian;
+    \vspace{0.15cm}
+    \item agenteen lana gainbegiratzeko Scrumban agentikoaren fluxuan: zereginak esleitu, egoera-txostenak irakurri, blokeoak eskalatu eta lana itxi;
+    \vspace{0.15cm}
+    \item agente batek egindako lana egiaztatzeko: \textit{diff}-ak irakurri, testak epaitu, arkitektura zaindu;
+    \vspace{0.15cm}
+    \item agenteen huts egiteko modu ohikoenak antzemateko eta konpontzeko.
+\end{itemize}
+
+Eskuliburua edozein programazio-hizkuntzatan kodetzen dakien eta Git erabili duen edonorentzat da.
+Giten oinarriak falta bazaizkizu, hasi aurreko eskuliburutik; hemen ez ditugu errepikatuko.
+Gogoratu eskuliburu bat ez dela zertan hasieratik bukaerara irakurri behar: taldea antolatzea bada zure larria, hasi \ref{cha:taldeak}.~kapitulutik; agenteekin probatzeko gogoz bazaude, \ref{cha:taula}.~kapituluko ariketak dira abiapuntu ona, \ref{cha:scrumban}.~eta \ref{cha:kaixo}.~kapituluetara salto egin aurretik.
+Txantiloiak, konfigurazio-fitxategiak eta ariketen biltegiak liburuaren biltegi lagunean daude, eguneratuta.
+% TODO: biltegi lagunaren helbidea: \url{...}
+
+Prest zara bideari ekiteko?
+
+\section{Eskerrak}
+
+% TODO: liburua amaitzean idazteko (UEU, zuzentzailea, irakurle goiztiarrak, ikasleak).
+\todo[inline]{Eskerrak idazteko, liburua amaitzean.}
