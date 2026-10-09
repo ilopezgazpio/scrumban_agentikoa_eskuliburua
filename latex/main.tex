@@ -1,0 +1,156 @@
+\documentclass[12pt,fleqn]{book} % Default font size and left-justified equations
+\usepackage[top=3.6cm,bottom=3.6cm,left=3.8cm,right=3.8cm,headsep=12pt,letterpaper]{geometry} % Page margins
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Highlight color used throughout the book
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+\usepackage{mathptmx} % Adobe Times Roman as the default text font
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{amsthm}
+\usepackage{pdfpages}
+\usepackage{todonotes}
+
+% Language
+\usepackage[basque]{babel}
+\selectlanguage{basque}
+% Redefine the caption for figures to lowercase
+\addto\captionsbasque{
+  \renewcommand{\figurename}{irudia}
+}
+\makeatletter
+\addto\extrasbasque{%
+  \def\fnum@figure{\thefigure.\nobreakspace\figurename}%
+  \def\fnum@table{\thetable.\nobreakspace\tablename}%
+}
+\makeatother
+
+% Bibliography
+\usepackage[style=authoryear,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=false,backend=biber,dashed=false]{biblatex}
+\DeclareNameAlias{sortname}{family-given}
+\setlength{\bibitemsep}{0.9\itemsep}
+\addbibresource{bibliography.bib} % BibTeX bibliography file
+\defbibheading{bibempty}{}
+
+% TODO: behin-behineko izenburua, erabaki aurretik.
+\newcommand{\bookname}{Agenteak software-garapeneko lantaldeetan integratzeko eskuliburua}
+\input{structure} % Template commands (headers, boxes, chapter images...)
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begingroup
+\thispagestyle{empty}
+% TODO: azala berria. Oraingoz aurreko liburuaren azala, txantiloi gisa (Pictures/nagusia.xcf, nagusia.xoj).
+\AddToShipoutPicture*{\put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{Pictures/nagusia.png}}}
+\centering
+\vspace*{9cm}
+\par\normalfont\fontsize{30}{30}\sffamily\selectfont
+\textbf{\bookname}\\
+\vspace*{2cm}
+{\LARGE Inigo Lopez-Gazpio}\par % TODO: egilekideak
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE  (TODO: UEUk/EHUk emandako datuekin bete argitaratu aurretik)
+%----------------------------------------------------------------------------------------
+\newpage
+\thispagestyle{empty}
+\noindent \copyright\ Udako Euskal Unibertsitatea\\
+\noindent \copyright\ Euskal Herriko Unibertsitatea\\
+\noindent \copyright\ Inigo Lopez-Gazpio\\
+
+\vspace{0.5cm}
+
+\noindent UEUren ISBNa: [betetzeko]\\
+\noindent UPV/EHUren ISBNa: [betetzeko]\\
+\noindent Lege-gordailua: [betetzeko]\\
+
+\vspace{0.5cm}
+
+\noindent Inprimategia: [betetzeko]\\
+\noindent Azalaren diseinua: [betetzeko]\\
+\noindent Hizkuntza-zuzenketen arduraduna: [betetzeko]\\
+
+\vspace{0.5cm}
+
+\noindent Banatzaileak: UEU. Erribera 14, 1, D BILBO. Telf. 946790546\\
+\hangindent=2.5cm Helbide elektronikoa: argitalpenak@ueu.eus\\
+\url{www.ueu.eus}\\ \\
+Euskal Herriko Unibertsitatea\\
+Helbide elektronikoa: argitalpenak@ehu.eus\\
+\url{www.ehu.eus/argitalpenak}\\ \\
+
+\vspace{0.5cm}
+
+\noindent Galarazita dago liburu honen kopia egitea, osoa nahiz zatikakoa, edozein modutara delarik ere, edizio honen Copyright-jabeen baimenik gabe.\\ \\
+
+\newpage
+\noindent Esker ona Udako Euskal Unibertsitateari eta Euskal Herriko Unibertsitateari, euskarazko ikasmaterialgintza sustatzeko egiten duten lanagatik.\\ \\
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+\chapterimage{Pictures/header_toc.pdf.pdf}
+\pagestyle{empty}
+\tableofcontents
+\cleardoublepage
+\pagestyle{fancy}
+
+%----------------------------------------------------------------------------------------
+%	KAPITULUAK  (goiburuak aurreko liburukoak dira, behin-behinekoak; ikus README.md)
+%----------------------------------------------------------------------------------------
+
+\chapterimage{Pictures/01/header_1.pdf.pdf}
+\chapter{Hitzaurrea eta helburuak}
+\input{chapters/01-hitzaurrea}
+
+\chapterimage{Pictures/02/header_2.pdf.pdf}
+\chapter{Taldeak eta rolak}
+\input{chapters/02-taldeak_rolak}
+
+\chapterimage{Pictures/03/header3.pdf.pdf}
+\chapter{Erabiltzaile-historiatik agentearen zereginera}
+\input{chapters/03-zereginak}
+
+\chapterimage{Pictures/04/header4.pdf.pdf}
+\chapter{Biltegia, lan-eremu partekatua}
+\input{chapters/04-biltegia}
+
+\chapterimage{Pictures/05/header5.pdf.pdf}
+\chapter{Kodetzeko agenteak}
+\input{chapters/05-agenteak}
+
+\chapterimage{Pictures/06/header6.pdf.pdf}
+\chapter{Agent-scrum}
+\input{chapters/06-agent_scrum}
+
+\chapterimage{Pictures/07/header7.pdf.pdf}
+\chapter{Ariketak: kaixo, agent-scrum!}
+\input{chapters/07-ariketak_kaixo}
+
+\chapterimage{Pictures/08/header9.pdf.pdf}
+\chapter{Ariketak: ekosistema agenteekin}
+\input{chapters/08-ariketak_ekosistema}
+
+\chapterimage{Pictures/09/header8.pdf.pdf}
+\chapter{Egiaztapena eta berrikuspena}
+\input{chapters/09-egiaztapena}
+
+\chapterimage{Pictures/10/10_header.pdf.pdf}
+\chapter{Ohiko arazoak eta errezetak}
+\input{chapters/10-arazoak}
+
+\chapterimage{Pictures/header_empty.pdf}
+\chapter{Eranskina: txantiloiak eta konfigurazioa}
+\input{chapters/11-eranskina}
+
+\chapterimage{Pictures/bibliografia/biblio_header2.pdf.pdf}
+\nocite{*}
+\printbibliography[]
+
+\end{document}

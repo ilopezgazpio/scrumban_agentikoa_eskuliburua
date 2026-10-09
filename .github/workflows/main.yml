@@ -1,0 +1,52 @@
+name: main
+
+on:
+  push:
+  pull_request:
+    types:
+      - closed
+  schedule:
+    - cron: '0 0 * * 5'
+  workflow_dispatch:
+
+jobs:
+
+  LaTeX:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+
+    - name: '🧰 Checkout'
+      uses: actions/checkout@v7
+
+    - name: '📓 Build PDF (pdflatex) on container btdi/latex'
+      run: |
+        docker run --rm -v "$PWD":/wrk -w /wrk/latex btdi/latex bash -ec '
+          pdflatex -interaction=nonstopmode main.tex
+          pdflatex -interaction=nonstopmode main.tex
+          biber main
+          pdflatex -interaction=nonstopmode main.tex
+          pdflatex -interaction=nonstopmode main.tex
+        '
+
+    - name: '📤 Upload artifact: PDF'
+      uses: actions/upload-artifact@v7
+      with:
+        name: main.pdf
+        path: latex/main.pdf
+
+    - name: '🚀 Publish'
+      if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: |
+        mkdir out
+        mv latex/main.pdf out
+        cd out
+        git init -b book
+        git config --local user.email "push@gha"
+        git config --local user.name "GHA"
+        git add main.pdf
+        git commit -m "Automatized GH actions update ${{ github.sha }}"
+        git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:book

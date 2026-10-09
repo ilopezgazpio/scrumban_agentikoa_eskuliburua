@@ -1,0 +1,20 @@
+*.txt
+*.gddoc
+*.gdoc
+*.doc
+*.odt
+*.org
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.ptc
+*.run.xml
+*.toc
+*~
+*#
+
+# Aurreko liburuaren (2024) erreferentzia-kopia, ez igo biltegira
+aurreko_liburua_2024/
