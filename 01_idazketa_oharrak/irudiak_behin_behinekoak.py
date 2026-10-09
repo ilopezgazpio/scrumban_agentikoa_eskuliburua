@@ -35,12 +35,12 @@ with plt.xkcd(scale=1.1, length=120, randomness=2):
             if w >= 16: ax.text(x + w/2, y + 0.9, lab, ha="center", va="center", fontsize=12, color=(RED if hot else INK))
             else: ax.text(x + w/2, y - 0.55, lab, ha="center", va="top", fontsize=10, color=(RED if hot else INK))
             x += w
-    ax.text(62, 9.3, "botila-lepoa: lanik handiena", color=RED, fontsize=12, ha="center")
+    ax.text(62, 9.3, "lanik astunena", color=RED, fontsize=12, ha="center")
     arrow(ax, (62, 9.0), (53, 8.5), color=RED)
-    ax.text(78, 5.0, "botila-lepoa lekuz aldatu da", color=RED, fontsize=12, ha="center")
+    ax.text(78, 5.0, "lan astunak lekuz aldatu dira", color=RED, fontsize=12, ha="center")
     arrow(ax, (66, 4.8), (36, 3.9), color=RED, rad=0.25)
     arrow(ax, (84, 4.7), (92, 3.9), color=RED, rad=-0.3)
-    fig.savefig("Pictures/01/1.botila_lepoa.pdf", bbox_inches="tight"); plt.close(fig)
+    fig.savefig("Pictures/01/1.lan_astunak.pdf", bbox_inches="tight"); plt.close(fig)
 
 # ---------- 4. Git vs GitHub ----------
 with plt.xkcd(scale=1.1, length=120, randomness=2):
