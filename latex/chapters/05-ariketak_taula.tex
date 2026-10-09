@@ -1,27 +1,113 @@
 % 05. kapitulua - Ariketak: zereginak eta taulak GitHuben
-% Helburua: agent-scrumera iritsi aurretik eskuz praktikatzea agenteek gero kontsumituko duten guztia:
-%           GitHub Projects taula bat sortu, Kanban eta Scrum ikuspegiak gehitu, issue-ak idatzi eta
-%           Egiteko / Egiten / Eginda zutabeetan zehar mugitu, adarra eta pull request-a issue bati lotu.
+% Helburua: agent-scrumera iritsi aurretik eskuz praktikatzea agenteek gero kontsumituko duten guztia.
 %           Kapitulu praktikoa, teoria berririk gabe: 1-4. kapituluetako kontzeptuak eskuekin finkatzeko.
-% Ariketa-sekuentzia proposatua (aurreko liburuko formatuan: "N. ariketa - ...", "Ariketa ebatziak", "Proposatutako ariketa gehigarriak"):
-%   1. ariketa - Taldearen biltegia eta GitHub Projects taula sortu, biltegiari lotu, taldekideak gehitu.
-%   2. ariketa - Kanban ikuspegia: Egiteko / Egiten / Eginda zutabeak (Status eremua), "Egiten" zutabeari muga jarri (WIP).
-%   3. ariketa - Scrum ikuspegia: Iteration (sprint) eremua, Priority eta Estimate eremu pertsonalizatuak,
-%                taula-ikuspegia iterazioka taldekatuta, Roadmap ikuspegia.
-%   4. ariketa - Issue-ak idatzi: issue-txantiloia (testuingurua, onarpen-irizpideak, "eginda" definizioa),
-%                etiketak (bug, feature, docs), arduraduna, mugarria (milestone); ekosistemaren backlog-etik abiatuta.
-%   5. ariketa - Issue-ak eskuz mugitu zutabeetan zehar; egoera-aldaketa bakoitza iruzkin batekin dokumentatu (egoera-txostena).
-%   6. ariketa - Automatizazioak: Projects-en workflow integratuak (issue berria -> Egiteko; issue itxita edo PR bateratuta -> Eginda).
-%   7. ariketa - Issue batetik adarra sortu, konfirmazioetan issue-a aipatu (#N), pull request-a "Closes #N"-rekin,
-%                berrikuspena, bateratzea; egiaztatu issue-a itxi dela eta txartela Eginda zutabera mugitu dela.
-%   8. ariketa - Sprint baten simulazioa rol-jokoan: Nami, Ane, Mikel eta Gotzon; sprint backlog-a, eguneroko taula-bilera,
-%                burndown (Insights), sprint-itxiera eta atzera-begirakoa. Gizakiek egiten dute gero agenteek egingo dutena.
-%   9. ariketa - Blokeoak eta eskalatzea: "blocked" eta "needs-human" etiketak, issue-aren egoera-makina paperean
-%                (7. kapituluan formalizatuko dena).
-%  10. ariketa - Gauza bera terminaletik: gh CLI (gh issue create, gh issue edit, gh project item-add, gh pr create).
-%                Hau da agenteek gero erabiliko duten interfazea: zubia 6. kapitulura.
 % Aurreko liburutik berrerabil daitekeena:
 %   - aurreko_liburua_2024/kapituluak/9-ariketa_adarkatze.tex (product/sprint backlog, taldea, zikloak)
 %   - aurreko_liburua_2024/kapituluak/5-prestaketa_lanak.tex (ariketen formatua)
 % Irudiak: Pictures/05/ (goiburu hutsa header_05.pdf.xoj); backlog-aren irudiak Pictures/09/ karpetan daude (9.backlog, 9.product_backlog.xoj)
-\todo[inline]{Idazteko.}
+
+Kapitulu honetan ez dugu teoria berririk ikasiko.
+Aurreko lau kapituluetan ikusitakoa eskuekin finkatuko dugu, agenteei zereginik eman aurretik: proiektu-taula bat sortuko dugu GitHuben, Kanban eta Scrum ikuspegiak gehituko dizkiogu, \textit{issue}-ak idatziko ditugu eta zutabeetan zehar mugituko ditugu, eta adarrak eta \textit{pull request}-ak \textit{issue}-ei lotuko dizkiegu.
+Agenteek gero kontsumituko duten guztia gizakiok egingo dugu lehenbizi, pausoz pauso, zer gertatzen den ulertzeko.
+Ariketa hauetan ere ekosistemaren proiektua eta Nami, Ane, Mikel eta Gotzonen taldea izango ditugu lagun.
+
+\section{Ariketa ebatziak}
+
+\subsection{1. ariketa - Biltegia eta proiektu-taula sortzen}
+
+Sortu taldearen biltegia GitHuben, sortu \textit{GitHub Projects} taula berri bat eta lotu biltegiari.
+Gehitu taldekide guztiak, bakoitza bere rolarekin.
+Zer alde dago erabiltzaile baten proiektuaren eta erakunde baten proiektuaren artean?
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{2. ariketa - Kanban ikuspegia eta lanean dauden zereginen muga}
+
+Sortu Kanban ikuspegi bat \textit{Status} eremuan oinarrituta, hiru zutaberekin: Egiteko, Egiten eta Eginda.
+Jarri muga bat Egiten zutabeari.
+Zergatik mugatu behar da aldi berean lanean dauden zereginen kopurua?
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{3. ariketa - Scrum ikuspegia: iterazioak, lehentasunak eta estimazioak}
+
+Gehitu taulari \textit{Iteration} eremu bat sprintak definitzeko, eta \textit{Priority} eta \textit{Estimate} eremu pertsonalizatuak.
+Sortu taula-ikuspegi bat iterazioka taldekatuta eta \textit{Roadmap} ikuspegi bat.
+Noiz da erabilgarriagoa Kanban ikuspegia, eta noiz Scrum ikuspegia?
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{4. ariketa - \textit{Issue}-ak idazten}
+
+Idatzi ekosistemaren \textit{product backlog}-eko lehen zereginak \textit{issue} gisa, txantiloi bati jarraituz: testuingurua, onarpen-irizpideak eta egindakoaren definizioa.
+Gehitu etiketak (\textit{bug}, \textit{feature}, \textit{docs}), arduraduna eta mugarria.
+Betetzen ditu zure \textit{issue} bakoitzak \textit{INVEST} irizpideak?
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{5. ariketa - \textit{Issue}-ak zutabeetan zehar mugitzen}
+
+Mugitu \textit{issue}-ak eskuz zutabeetan zehar, lana aurrera doan heinean.
+Egoera-aldaketa bakoitzean idatzi iruzkin labur bat: zer egin den, zer falta den eta zerk blokeatzen duen.
+Iruzkin horiek dira gero agenteek emango dituzten egoera-txostenak.
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{6. ariketa - Taularen automatizazioak}
+
+Konfiguratu taularen \textit{workflow} integratuak: \textit{issue} berria Egiteko zutabera, \textit{issue} itxia edo \textit{pull request} bateratua Eginda zutabera.
+Egiaztatu aurreko ariketan eskuz egiten zenuena orain automatikoki gertatzen dela.
+Zer gelditzen da oraindik eskuz egiteko?
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{7. ariketa - \textit{Issue} batetik adarrera eta \textit{pull request}-era}
+
+Sortu adar bat \textit{issue} batetik, egin konfirmazioak \textit{issue}-a aipatuz (\verb|#N|), ireki \textit{pull request} bat \verb|Closes #N| esaldiarekin, eskatu berrikuspena eta bateratu.
+Egiaztatu \textit{issue}-a itxi dela eta txartela Eginda zutabean dagoela.
+Marraztu taldearen Giten historia-grafoa bateratu aurretik eta ondoren.
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{8. ariketa - Sprint baten simulazioa rol-jokoan}
+
+Simulatu sprint oso bat rol-jokoan: Ane produktu-jabea, Gotzon gainbegiralea, Nami eta Mikel garatzaileak.
+Planifikatu \textit{sprint backlog}-a, egin eguneroko bilera taularen aurrean, jarraitu \textit{burndown} grafikoa \textit{Insights} atalean, itxi sprinta eta egin atzera-begirakoa.
+Gizakiek egingo dute hemen gero agenteek egingo dutena.
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{9. ariketa - Blokeoak eta eskalatzea}
+
+Sortu \textit{blocked} eta \textit{needs-human} etiketak, eta erabili aurreko ariketako sprintean.
+Marraztu paperean \textit{issue} baten egoera-makina: egoerak, trantsizioak eta nork eragiten duen bakoitza.
+Egoera-makina hori formalizatuko dugu 7. kapituluan.
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\subsection{10. ariketa - Gauza bera terminaletik}
+
+Errepikatu 4., 5. eta 7. ariketak terminaletik, \verb|gh| komando-lerroko tresna erabiliz: \verb|gh issue create|, \verb|gh issue edit|, \verb|gh project item-add| eta \verb|gh pr create|.
+Hau da agenteek erabiliko duten interfazea; hemendik aurrera, taulan ikusten duzun guztia agindu bihur daiteke.
+
+\todo[inline]{Ebazpena garatzeko.}
+
+\section{Proposatutako ariketa gehigarriak}
+
+Hona hemen zereginen taularekin trebatzen jarraitzeko proposatzen diren ariketa gehigarriak:
+
+\begin{enumerate}
+
+    \item Idatzi \textit{issue}-txantiloi bat eta \textit{pull request}-txantiloi bat biltegiaren \verb|.github| karpetan. Zer onura du txantiloiak agenteek \textit{issue}-ak kontsumituko dituztenean?
+    \vspace{0.25cm}
+    \item Idatzi zutabe bakoitzaren arauak (noiz sar daiteke txartel bat zutabe batean, noiz atera) dokumentu labur batean biltegian. Arau horiek izango dira gero gainbegiralearen irizpideak.
+    \vspace{0.25cm}
+    \item Gehitu \textit{needs-human} zutabe bat eta jarri 1eko muga. Zer gertatzen da fluxuarekin muga horrekin? Eta mugarik gabe?
+    \vspace{0.25cm}
+    \item Neurtu \textit{issue} bakoitzaren ziklo-denbora, Egiten zutabera sartzen denetik Eginda zutabera iristen den arte. Zein da zereginik motelena, eta zergatik?
+    \vspace{0.25cm}
+    \item Taula bera Kanban ikuspegian eta Scrum ikuspegian kudeatu bi aste segidan. Zein da egokiagoa taldearen proiektuarentzat? Zein izango litzateke egokiagoa agenteentzat?
+    \vspace{0.25cm}
+    \item Sortu \textit{issue} bat beste \textit{issue} batzuen menpekoa dena, eta adierazi menpekotasuna. Nola kudeatzen du taulak? Nola jakin dezake agente batek zeregin bati ekin diezaiokeen ala ez?
+
+\end{enumerate}
