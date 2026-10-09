@@ -1,19 +1,6 @@
-# Agenteak software-garapeneko lantaldeetan integratzeko eskuliburua (lan-karpeta)
+# Software-ingeniaritza agentikoa: lantalde hibridoak kudeatzeko eskuliburua (lan-karpeta)
 
-Karpeta hau liburu berriaren lan-eremua da (UEUren unibertsitate-liburuen diru-poltsa, 2026ko deialdia).
-Aurreko liburua, *Git Bertsioak Kontrolatzeko Sistemarako eskuliburua* (2024), osorik dago GitHubeko
-`ilopezgazpio/Git_BKS_eskuliburua` biltegian; hemen liburu berrirako behar dena eta erreferentziarako
-balio duena baino ez da gorde. Izenburua eta kapituluen izenburuak behin-behinekoak dira.
-
-## Karpeten egitura
-
-| Karpeta | Edukia |
-|---|---|
-| `00_deialdia_administrazioa/` | UEUren deialdia (URLa, poltsaren ezaugarriak, poltsadunen betebeharrak), 2022ko eskari-orria (eredu gisa), 2024ko ebaluazio-txostena, UEUko elkarrizketa eta `marketing_2024/` (posterra, katalogo-orria). |
-| `01_idazketa_oharrak/` | Terminologia-erabakiak (`aspell` agindua barne), goiburuen neurriak eta letra-tipoa, LaTeX euskaraz erabiltzeko oharrak. |
-| `latex/` | Liburu berriaren LaTeX proiektua: `main.tex`, `structure.tex`, `bibliography.bib`, `chapters/` (11 kapitulu) eta `Pictures/` (kapitulu berrien zenbakien arabera antolatua). `.github/workflows/main.yml` lan-fluxuak karpeta hau konpilatzen du. |
-| `adibideak/` | Ekosistemaren adibide-proiektuak: `ekosistema_maven` (Java + Maven, test-karpetarekin), `ekosistema_java`, `ekosistema_python`. 8. kapituluko ariketen oinarria. Bakoitzak bere `.git` historia du (aurreko liburuko ariketena). |
-| `aurreko_liburua_2024/` | 2024ko liburuaren kapituluak (`kapituluak/*.tex`), `main_2024.tex`, argitaratutako PDFa eta liburu berrian berrerabiliko **ez** diren irudiak (`irudiak/<kapitulu zaharra>/`), jatorrizko `.xoj` fitxategiekin. **Kontuz: `.xoj` jatorrizkoak ez daude GitHuben; hau da kopia bakarra.** |
+Karpeta hau liburuaren lan-eremua da (UEUren unibertsitate-liburuen diru-poltsa, 2026ko deialdia).
 
 ## Aurkibidearen zirriborroa eta materialaren mapa
 
@@ -31,11 +18,8 @@ balio duena baino ez da gorde. Izenburua eta kapituluen izenburuak behin-behinek
 | 10 | Ohiko arazoak eta errezetak | `10-arazoak.tex` | 10. kapitulu zaharra (egitura arazoa -> errezeta). Irudiak `Pictures/10/`. |
 | 11 | Eranskina: txantiloiak eta konfigurazioa | `11-eranskina.tex` | `.github/workflows/main.yml`. |
 
-Kapitulu bakoitzaren `.tex` fitxategiaren hasieran iruzkin bat dago helburuarekin eta berrerabil daitekeen materialaren bide zehatzekin.
-Kapituluen goiburuak (`\chapterimage`) aurreko liburukoak dira, behin-behinekoak: 1-7 zenbaki beraren goiburua, 8. kapituluak 9. zaharrarena, 9.ak 8. zaharrarena, 10.ak 10. zaharrarena, 11.ak goiburu hutsa.
-Jatorrizko `.xoj` fitxategiak irudi bakoitzaren ondoan daude, berriro marrazteko.
+Kapitulu bakoitzaren `.tex` fitxategiaren hasieran iruzkin bat dago helburuarekin eta berrerabil daitekeen materialarekin.
 
-Egiteke daudenak `structure.tex`-en: koadro nabarmenduen etiketa oraindik "Git" da (`\newtheorem{theoremeT}[dummy]{Git}`), eta `bibliography.bib`-ek aurreko liburuko erreferentzia guztiak ditu (`\nocite{*}` dago `main.tex`-en, garbitu bukaeran).
 
 ## Konpilatu
 
