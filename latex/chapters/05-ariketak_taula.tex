@@ -19,7 +19,31 @@ Sortu taldearen biltegia GitHuben, sortu \textit{GitHub Projects} taula berri ba
 Gehitu taldekide guztiak, bakoitza bere rolarekin.
 Zer alde dago erabiltzaile baten proiektuaren eta erakunde baten proiektuaren artean?
 
-\todo[inline]{Ebazpena garatzeko.}
+Biltegia sortzea da errazena, eta aurreko eskuliburuan ikasitakoa baino ez da: GitHuben \textit{New repository} aukeratu, izena eman ---\verb|ekosistema|, esaterako---, \textit{README} fitxategi batekin eta lizentzia batekin hasieratu, eta urruneko helbidea kopiatu.
+Terminaletik gauza bera egin daiteke \verb|gh| tresnarekin, agindu bakarrean, eta kopia lokala ere sortuta:
+
+\verb|gh repo create ekosistema --public --add-readme \|
+
+\verb|               --license mit --clone|
+
+Taldekideak gehitzeko, biltegiaren \textit{Settings} atalean \textit{Collaborators} aukeratu eta bakoitza bere erabiltzaile-izenarekin gonbidatu.
+Idazteko baimena (\textit{write}) nahikoa da garatzaileentzat; administratzailearena taldeko batek bakarrik behar du, eta hobe da gutxi izatea, \ref{cha:biltegia}.~kapituluan ikusi dugun bezala, lerro nagusiaren babes-arauak administratzaileek bakarrik alda baititzakete.
+
+Proiektu-taula sortzeko, erabiltzailearen edo erakundearen \textit{Projects} fitxan \textit{New project} aukeratu, \textit{Board} txantiloia hautatu eta izena eman.
+Kontuz: proiektua sortu berritan \textbf{ez dago biltegiari lotuta}.
+Biltegiaren \textit{Projects} fitxan \textit{Link a project} aukeratu behar da, edo terminaletik:
+
+\verb|gh project create --owner @me --title "Ekosistema"|
+
+\verb|gh project link 1 --owner @me --repo erabiltzailea/ekosistema|
+
+Lotura horri esker, biltegiko \textit{issue}-ak taulara gehi daitezke eta taulako automatizazioek biltegiko gertaerei erantzun diezaiekete; lotu gabe, taula zerrenda soil bat da, ezer gertatzen ez den tokia.
+Taldekide bakoitzak taula ikusten eta editatzen duela egiaztatu behar da amaitu aurretik; proiektuek beren baimenak dituzte, biltegiarenetatik bereiz.
+
+Galderari dagokionez: erabiltzaile batek sortutako proiektua kontu horrena da ---hark bakarrik administra dezake, eta kontua desagertzen bada, proiektua ere bai---, eta biltegi bakarrarekin edo gutxirekin lotu ohi da.
+Erakunde batek sortutako proiektua erakundearena da: taldeei (\textit{teams}) baimenak eman dakizkieke, erakundeko biltegi guztietako \textit{issue}-ak bil ditzake, eta pertsonak joan arren proiektuak bere horretan jarraitzen du.
+Ikasgela baterako, beraz, erakunde bat sortzea merezi du ---GitHubek doan ematen ditu hezkuntzarako--- eta hor sortu taldearen biltegia eta taula.
+Interfazearen izenak aldatu egiten dira noizean behin; kontzeptuak ---biltegia, lotutako proiektua, baimenak--- ez.
 
 \subsection{2. ariketa - Kanban ikuspegia eta lanean dauden zereginen muga}
 

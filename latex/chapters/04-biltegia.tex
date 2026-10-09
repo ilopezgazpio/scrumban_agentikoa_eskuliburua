@@ -18,13 +18,21 @@ Bada, ordea, aurreko eskuliburuan nahita lausotuta utzi genuen bereizketa bat, e
 Zure ordenagailuan exekutatzen den programa bat da, konfirmazioen grafo bat gordetzen duena eta grafo horiek nodoen artean sinkronizatzeko protokolo bat eskaintzen duena.
 Gitek ez daki nor zaren, konfirmazio bakoitzean idatzitako izenetik eta helbide elektronikotik harago; ez daki zer baimen dituzun; ez daki zer den \textit{issue} bat, berrikuspen bat edo proiektu-taula bat.
 \textit{Origin} helbide bat besterik ez da, eta edozein tokitara apunta dezake: USB memoria bateko karpeta batera, unibertsitateko zerbitzari batera edo hodeiko plataforma batera.
-Gitentzat guztiak berdinak dira.
+Gitentzat guztiak berdinak dira (\ref{fig:git_vs_github}~irudia).
 
 \textbf{GitHub plataforma da}: urruneko biltegiak ostatatzen dituen zerbitzu bat, Giten gainean \textbf{geruza sozial eta kudeaketakoa} eraikitzen duena.
 Geruza horretan daude nortasuna eta baimenak ---nor den taldekide, nork idatz dezakeen lerro nagusian---, \textit{issue}-ak, \textit{pull request}-ak, berrikuspenak, proiektu-taulak, adarren babes-arauak, integrazio jarraitua (\textit{GitHub Actions}) eta bertsioen argitalpena.
 Hau da, liburu honetan konfirmazioen grafoaren gainetik ikusiko dugun ia guztia GitHuben geruzakoa da, ez Gitena.
 GitHub ez da bakarra: GitLab, Gitea edo Bitbucket plataformek antzeko geruza eskaintzen dute, izen eta xehetasun desberdinekin.
 GitHub aukeratu dugu nagusia delako eta hezkuntzarako doakoa delako, baina kontzeptu guztiak eramangarriak dira.
+
+% BEHIN-BEHINEKO irudia (matplotlib, xkcd estiloa, Purisa letra); eskuz berriro marrazteko.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Pictures/04/4.git_vs_github.pdf}
+    \caption{Git teknologia da: konfirmazioen grafoa eta nodoen arteko sinkronizazioa. GitHub Giten gainean eraikitako geruza soziala eta kudeaketakoa da, eta gizakiek zein agenteek bi geruzekin hitz egiten dute.}
+    \label{fig:git_vs_github}
+\end{figure}
 
 Bereizketa hori ez da pedanteria; lantalde hibrido batean funtsezkoa da.
 Agenteek bi geruzekin hitz egiten dute, eta bakoitzarekin modu desberdinean: Gitekin, kodea idazteko eta sinkronizatzeko ---adarrak, konfirmazioak, \textit{push}---; plataformarekin, koordinatzeko ---zereginak hartu, egoera jakinarazi, \textit{pull request}-ak ireki, berrikuspenak jaso---.
