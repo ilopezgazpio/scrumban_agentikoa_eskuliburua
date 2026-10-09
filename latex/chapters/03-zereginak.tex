@@ -5,4 +5,36 @@
 %   - aurreko_liburua_2024/kapituluak/2-laburpena.tex ("SDMak eta Git" atala: SDMak, agile, INVEST, ekosistemaren plana ur-jauzi vs agile)
 % Irudiak: Pictures/03/ (2.garapen_planik_ez, 2.garapen_dinamikoa, 2.ekosistema-urjauzi, 2.ekosistema_agile, 4.garapen_dinamikoa;
 %          goiburu hutsa header_03.pdf.xoj)
-\todo[inline]{Idazteko.}
+Aurreko eskuliburuan esan genuen \textit{agile} metodologietako erabiltzaile-historioak Giten adar gisa garatzen direla, eta erabiltzaile-historio onek \textit{INVEST} izan behar dutela: independenteak, negoziagarriak, baliotsuak, estimagarriak, neurgarriak eta probagarriak.
+Orduan nahikoa zen hori, kodea idaztea geure esku zegoelako eta hutsuneak buruan betetzen genituelako kodetzen ari ginen bitartean.
+Orain ez da nahikoa.
+Zeregin bat agente bati ---edo ezagutzen ez zaituen taldekide bati--- ematen diozunean, idatzi ez duzun guztia asmatu egingo du; eta asmatu, ziur asko, zuk nahi ez zenuen moduan.
+Kapitulu honetan bide osoa egingo dugu, erabiltzaile-historiotik zereginera: erabiltzaileak zer nahi duen eta zergatik; hortik, zer egin behar den zehazki; eta zer bete behar den eginda dagoela esateko.
+
+Bide horretan bada tarteko pauso bat, askotan saltatzen dena: \textbf{diseinua}.
+Historio batek esaten du zer lortu nahi den; zereginak esaten du zer egin; baina bien artean norbaitek erabaki behar du \textbf{nola}: zer modulu edo klase egongo diren, nola hitz egingo duten elkarrekin, zer egoeratatik igaroko den sistema.
+Erabaki horiek kodean bakarrik hartzen baditugu, lehen konpilatzen den inplementazioak erabakiko du diseinua, eta ez taldeak.
+Agenteekin, gainera, lehen konpilatzen den inplementazioa minutu batean iritsiko da.
+Horregatik behar dugu erabakiak kodea baino lehen eta kodetik kanpo idazteko modu bat, eta horretarako sortu zen UML.
+
+\textbf{UML} (\textit{Unified Modeling Language}) softwarea modelatzeko hizkuntza grafiko estandarra da.
+1990eko hamarkadan sortu zen, Grady Boochen, James Rumbaughen eta Ivar Jacobsonen modelatze-metodoak bateratuz, eta 1997tik \textit{Object Management Group} (OMG) erakundeak estandarizatzen du.
+Diagrama mota askok osatzen dute, bi familiatan: \textbf{egiturazkoak}, sistema zerez osatuta dagoen adierazten dutenak ---klase-diagrama, osagaien diagrama, hedapen-diagrama---, eta \textbf{portaerazkoak}, sistemak nola jokatzen duen adierazten dutenak ---erabilera-kasuen diagrama, sekuentzia-diagrama, jarduera-diagrama, egoera-makinaren diagrama---.
+Ez dizut gezurrik esango: UML osoa ikastea liburu oso baten lana da, eta badira horretarako material bikainak.
+Hemen lau diagrama baino ez ditugu erabiliko, eta bakoitza arrazoi zehatz batekin.
+
+Zertarako behar dugu UML garapena kontrolatzeko?
+Hiru arrazoirengatik.
+Lehenik, diagrama bat \textbf{kodea baino lehen hartutako erabakia} da: klase-diagrama batek interfazeak finkatzen ditu agenteak lehen lerroa idatzi aurretik, eta sekuentzia-diagrama batek zehazten du nork deitzen dion nori.
+Bigarrenik, diagrama bat \textbf{hizkuntza partekatua} da: taldekide guztiek ---eta agenteek--- gauza bera ulertzen dute marrazki beretik, eta eztabaidak marrazkiaren gainean egiten dira, ez kodearen gainean, askoz merkeago.
+Hirugarrenik, diagrama bat \textbf{egiaztagarria} da: zeregin batean klase-diagrama bat badago, berrikusleak egiazta dezake inplementazioak diagrama errespetatzen duen, eta agenteari eska diezaiokegu errespetatzeko.
+Beste hitz batzuetan: diagramak zereginaren \textbf{kontratuaren} parte dira, onarpen-irizpideekin batera.
+
+Kontuz, ordea: ez dugu modelo osorik egingo, ezta diagramak kodearekin batera eguneratuta mantentzeko agintzarik ere, hori ez baita inoiz betetzen.
+\textbf{UML arina} egingo dugu: diagrama bat marraztuko dugu soilik agentearen edo taldekidearen lana mugatzen duenean, eta zeregina ixtean diagrama hori historiarako geratuko da, ez mantentze-lan gisa.
+Gainera, diagramak testu gisa idatziko ditugu ahal dugun guztietan, \textit{Mermaid} edo \textit{PlantUML} moduko notazioekin, bi arrazoirengatik: proiektu-taulako \textit{issue}-etan eta biltegian bertan bizi daitezke, kodearekin batera bertsionatuta; eta agenteek irakur ditzakete, marrazki bat ikusteko gai izan gabe ere.
+Egoera-makinaren diagrama, esaterako, berriro aurkituko duzu \ref{cha:scrumban}.~kapituluan, baina ez softwarea modelatzeko, zeregin baten bizi-zikloa bera modelatzeko baizik.
+
+Hona hemen kapituluaren ibilbidea: lehenbizi erabiltzaile-historioak gogoratuko ditugu eta \textit{INVEST} irizpideak berrikusiko ditugu agenteen ikuspegitik; ondoren, onarpen-irizpideak eta egindakoaren definizioa idazten ikasiko dugu; gero, zeregina kontratu gisa aztertuko dugu, \textit{issue} baten anatomia osoarekin; eta, amaitzeko, UML arina txertatuko dugu zereginetan, lau diagramarekin: klase-diagrama, sekuentzia-diagrama, erabilera-kasuen diagrama eta egoera-makinaren diagrama.
+
+\todo[inline]{Atalak idazteko: erabiltzaile-historioak eta INVEST berrikusia; onarpen-irizpideak eta egindakoaren definizioa; zeregina kontratu gisa (issue baten anatomia); UML arina (klase, sekuentzia, erabilera-kasu, egoera-makina).}

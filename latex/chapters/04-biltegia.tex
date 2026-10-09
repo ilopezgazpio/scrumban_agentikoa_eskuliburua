@@ -6,4 +6,31 @@
 %   - .github/workflows/main.yml (CI adibide erreala: liburua bera konpilatzen duena)
 % Irudiak: Pictures/04/ (8.gitflow, 8.lan-fluxua, 8.adar_luzeak, 8.adarrak_laburrak, 8.sistema_banatua,
 %          8.Git-flow, 8.GitHub-flow_bestebat, 8.Git_lan_fluxua; goiburu hutsa header_04.pdf.xoj)
-\todo[inline]{Idazteko.}
+Aurreko eskuliburuan ikasi genuen Git bertsioak kontrolatzeko sistema \textbf{banatua} dela: nodo bakoitzak ---garatzaile bakoitzaren ordenagailuak--- historiaren kopia osoa du, eta besteen beharrik gabe lan egin dezake.
+Taldean lan egiteko, ordea, nodoek noizbait sinkronizatu behar dute, eta horretarako guztiek \textbf{urruneko helbide} bera erabiltzen dute, Giten \textit{origin} izena hartu ohi duena.
+Hodeian dagoen biltegi hori beste nodo bat da sistemaren barruan, berezitasun batekin: taldekide guztiek ezagutzen dute, eta beste guztiak harekin sinkronizatzen dira, konfirmazioak eta adarrak igoz eta jaitsiz.
+Helbide hori \verb|git clone| aginduarekin jasotzen dugu kopia bat egitean, edo \verb|git remote add origin| aginduarekin lotzen diogu lokalean hasieratutako biltegi bati; hortik aurrera, \verb|git push|, \verb|git fetch| eta \verb|git pull| aginduek egiten dute gainerakoa.
+Ez ditut hemen agindu horiek errepikatuko; zalantzarik baduzu, jo aurreko eskuliburuaren adarkatzeari buruzko kapitulura.
+
+Bada, ordea, aurreko eskuliburuan nahita lausotuta utzi genuen bereizketa bat, eta orain argitu beharra daukagu: \textbf{Git eta GitHub ez dira gauza bera}.
+
+\textbf{Git teknologia da.}
+Zure ordenagailuan exekutatzen den programa bat da, konfirmazioen grafo bat gordetzen duena eta grafo horiek nodoen artean sinkronizatzeko protokolo bat eskaintzen duena.
+Gitek ez daki nor zaren, konfirmazio bakoitzean idatzitako izenetik eta helbide elektronikotik harago; ez daki zer baimen dituzun; ez daki zer den \textit{issue} bat, berrikuspen bat edo proiektu-taula bat.
+\textit{Origin} helbide bat besterik ez da, eta edozein tokitara apunta dezake: USB memoria bateko karpeta batera, unibertsitateko zerbitzari batera edo hodeiko plataforma batera.
+Gitentzat guztiak berdinak dira.
+
+\textbf{GitHub plataforma da}: urruneko biltegiak ostatatzen dituen zerbitzu bat, Giten gainean \textbf{geruza sozial eta kudeaketakoa} eraikitzen duena.
+Geruza horretan daude nortasuna eta baimenak ---nor den taldekide, nork idatz dezakeen lerro nagusian---, \textit{issue}-ak, \textit{pull request}-ak, berrikuspenak, proiektu-taulak, adarren babes-arauak, integrazio jarraitua (\textit{GitHub Actions}) eta bertsioen argitalpena.
+Hau da, liburu honetan konfirmazioen grafoaren gainetik ikusiko dugun ia guztia GitHuben geruzakoa da, ez Gitena.
+GitHub ez da bakarra: GitLab, Gitea edo Bitbucket plataformek antzeko geruza eskaintzen dute, izen eta xehetasun desberdinekin.
+GitHub aukeratu dugu nagusia delako eta hezkuntzarako doakoa delako, baina kontzeptu guztiak eramangarriak dira.
+
+Bereizketa hori ez da pedanteria; lantalde hibrido batean funtsezkoa da.
+Agenteek bi geruzekin hitz egiten dute, eta bakoitzarekin modu desberdinean: Gitekin, kodea idazteko eta sinkronizatzeko ---adarrak, konfirmazioak, \textit{push}---; plataformarekin, koordinatzeko ---zereginak hartu, egoera jakinarazi, \textit{pull request}-ak ireki, berrikuspenak jaso---.
+Gitek ez dio inori ezer galdetzen; plataformak bai: baimenak, arauak eta ateak plataforman bizi dira, eta horiek dira agente bati lerro nagusia hausteko aukera kentzen dioten mekanismoak.
+Horregatik diogu biltegia \textbf{lan-eremu partekatua} dela: ez kodea gordetzen den tokia bakarrik, baizik eta gizakiek eta agenteek elkarrekin lan egiteko arauak idatzita dauden tokia.
+
+Kapitulu honetan lau gauza antolatuko ditugu lan-eremu horretan: zereginaren araberako \textbf{adarrak}, agente bakoitzak bere adarrean lan egin dezan; \textbf{\textit{pull request}-a} berrikuspen-unitate gisa, lana lerro nagusira iristen den ate bakarra; lerro nagusiaren \textbf{babes-arauak}, inork ---ez gizakiak, ez agenteak--- zuzenean idatz ez dezan; eta \textbf{integrazio jarraitua} epaile gisa, \textit{pull request} bakoitzean testak exekutatzen dituena eta emaitza gorriz edo berdez erantzuten duena.
+
+\todo[inline]{Atalak idazteko: zereginaren araberako adarrak; pull request-a berrikuspen-unitate gisa; lerro nagusiaren babes-arauak; integrazio jarraitua epaile gisa (GitHub Actions, liburuaren workflow-a adibide gisa).}
